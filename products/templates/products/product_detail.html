@@ -111,9 +111,15 @@
                         </div>
                     </form>
                     <div class="col{% if s %}-12 mt-2{% endif %}">
+                        {% if fav %}
                         <a href="{% url 'add_wishlist' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
-                            <span class="text-uppercase">Add to Wishlist</span>
+                            <span class="text-uppercase" type="hidden">Remove from wishlist</span>
                         </a>
+                        {% else %}
+                        <a href="{% url 'add_wishlist' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <span class="text-uppercase" type="hidden">Add to wishlist</span>
+                        </a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

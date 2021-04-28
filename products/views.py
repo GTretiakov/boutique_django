@@ -59,11 +59,15 @@ def all_products(request):
     
 
 def product_detail(request, product_id):
-
+    fav = bool
     product = get_object_or_404(Product, pk=product_id)
+    if product.wishlist.filter(id=request.user.id).exists():
+        fav = True
+        print('yes')
 
     context = {
         'product': product,
+        'fav': fav,
     }
     
     return render(request, 'products/product_detail.html', context)
