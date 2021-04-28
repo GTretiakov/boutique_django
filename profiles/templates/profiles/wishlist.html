@@ -65,7 +65,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <a href="{% url 'add_wishlist' product.id %}" class="btn btn-outline-black rounded-0 mt-5">
+                        <a href="{% url 'add_wishlist' product.id %}" class="btn btn-outline-black rounded-0">
                             <span class="text-uppercase">Remove from Wishlist</span>
                         </a>
                     </div>
@@ -112,4 +112,5 @@
 {% endblock %}
 
 {% block postloadjs %}
+{{ block.super }}
 {% endblock %}

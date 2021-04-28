@@ -63,7 +63,6 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     if product.wishlist.filter(id=request.user.id).exists():
         fav = True
-        print('yes')
 
     context = {
         'product': product,
