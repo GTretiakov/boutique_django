@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
 from .models import UserProfile
 from .forms import UserProfileForm
 
 from checkout.models import Order
+from products.models import Product
 
 
 @login_required
@@ -49,3 +51,22 @@ def order_history(request, order_number):
 
     return render(request, template, context)
     
+
+@login_required
+def add_wishlist(request, item_id):
+    product = get_object_or_404(Product, pk=item_id)
+    if product.wishlist.filter(id=request.user.id).exists():
+        product.wishlist.remove(request.user.id)
+        messages.success(request, f'Removed {product.name} from your wishlist')
+    else:
+        product.wishlist.add(request.user.id)
+        messages.success(request, f'Added {product.name} to your wishlist')
+    return HttpResponseRedirect(request.META["HTTP_REFERER"])
+
+
+@login_required
+def wishlist(request):
+    products = Product.objects.filter(wishlist=request.user.id)
+    items = {'wishlist': products}
+    print(products)
+    return render(request, 'profiles/wishlist.html', items)
