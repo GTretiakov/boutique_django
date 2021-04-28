@@ -1,45 +1,54 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Boutique Ado Milestone Project
 
-Welcome GTretiakov,
+This e-commerce website is a final project that concludes 'Full Stack Frameworks With Django' module and 'Full Stack Software Development' program provided by Canadian Business College.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+## UX
 
-## Gitpod Reminders
+This project is an online store that inherits most of the best practices used by hundreds of online stores all-around the Internet.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### User Stories
 
-`python3 -m http.server`
+- As a user, I want to have the ability to search through all items in a store and add them to my shopping bag.
+- As a user, I want to be able to modify the quantity of items in my bag as well as remove them from the bag.
+- As a user, I want to register and save my info, so my future shopping process is faster.
+- As a registered user, I want to add items to my Wishlist, so I can buy them later.
+- As a user, I want to be able to use an online store on devices with different screen resolution.
 
-A blue button should appear to click: *Make Public*,
+## Features
 
-Another blue button should appear to click: *Open Browser*.
+- All products are conveniently sorted by categories, also user can sort them by price and by rating.
+- Users can register an account and safe their info, as well as add items to a wishlist.
+- Searchbar makes it easier to find needed product.
+- Guest users can checkout without registration.
+- A convinient message system informs users about most of their actions (add to/remove from bag/wishlist, sign out, etc.).
+- Responsive design makes it easy to use the store on both mobile and desktop devices.
+- Stripe payment system provides safe checkout for credit card users.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Features left to implement
 
-A blue button should appear to click: *Make Public*,
+- Set up a loyalty system that can be used to conduct purchases
+- Ability to use coupon codes to reduce purchase price
+- Automatic tax calculation based on location
+- Implement social media account creation on All Auth
+- Integrate a live chat bot for inquiries before purchase
+- Set up a ticketing system for returns and post purchase issues
+- Integrate voice command functionality
 
-Another blue button should appear to click: *Open Browser*.
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Jquery
+- Python
+- Django
+- Bootstrap
+- Heroku
+- Amazon Web Services (AWS) 
+- GitHub
+- GitPod
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Testing
 
-## Updates Since The Instructional Video
+Most of the testing was done manually during development process with the help of Google Chrome Inspect Element Tool.
+One of the interesting issues I discovered during the testing process was related to Django messages framework.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
