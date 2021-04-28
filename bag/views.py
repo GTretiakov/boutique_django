@@ -7,7 +7,7 @@ from products.models import Product
 
 def view_bag(request):
     return render(request, 'bag/bag.html')
-    
+
 
 def add_to_bag(request, item_id):
 
@@ -41,6 +41,7 @@ def add_to_bag(request, item_id):
     request.session['bag'] = bag
     return redirect(redirect_url)
 
+
 def adjust_bag(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
@@ -67,9 +68,9 @@ def adjust_bag(request, item_id):
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
 
-
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
+
 
 def remove_from_bag(request, item_id):
     try:
