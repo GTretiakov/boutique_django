@@ -53,7 +53,8 @@ Most of the testing was done manually during development process with the help o
 One of the interesting issues I discovered during the testing process was related to Django messages framework.
 I assigned a very high z-index for messages, so they appear on top of all other elements. But after I closed a message I was unable to click on 'my profile' in dropdown menu. Actually, I was unable to click on anything that was covered by the message, because when I closed the message, it disappeared visually, but technically it just became transparent and it was still covering other elements. It took me a long time to figure out what’s going on and how to solve this issue, but finally I've decided to add an 'onClick' event to the button, so it makes the webpage reload.
 Special thanks to [Very Academy](https://www.youtube.com/channel/UC1mxuk7tuQT2D0qTMgKji3w) YouTube channel that helped me to implement wishlist functionality.
-There are still few minor issues I'll have to solve in the future. To make a wishlist functionality I've added one more field to the Product model form.<br/>
+There are still few minor issues I'll have to solve in the future.<br/>
+To make a wishlist functionality I've added one more field to the Product model form.<br/>
 ![model](/pics/model.jpg)
 <br/>But when I went to 'Product Management' page I've noticed that a new field appeared.<br/>
 ![product](/pics/product.jpg)
