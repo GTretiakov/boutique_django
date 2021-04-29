@@ -17,7 +17,7 @@ This project is an online store that inherits most of the best practices used by
 ## Features
 
 - All products are conveniently sorted by categories, also user can sort them by price and by rating.
-- Users can register an account and safe their info, as well as add items to a wishlist.
+- Users can register an account and save their info, as well as add items to a wishlist.
 - Searchbar makes it easier to find needed product.
 - Guest users can checkout without registration.
 - A convenient message system informs users about most of their actions (add to/remove from bag/wishlist, sign out, etc.).
@@ -51,7 +51,7 @@ This project is an online store that inherits most of the best practices used by
 
 Most of the testing was done manually during development process with the help of Google Chrome Inspect Element Tool.
 One of the interesting issues I discovered during the testing process was related to Django messages framework.
-I assigned a very high z-index from messages, so they appear on top of all other elements. But after I closed a message I was unable to click on 'my profile' in dropdown menu. Actually, I was unable to click on anything that was covered by the message, because when I closed the message, it disappeared visually, but technically it just became transparent and it was still covering other elements. It took me a long time to figure out what’s going on and how to solve this issue, but finally I've decided to add an 'onClick' event to the button, so it makes the webpage reload.
+I assigned a very high z-index for messages, so they appear on top of all other elements. But after I closed a message I was unable to click on 'my profile' in dropdown menu. Actually, I was unable to click on anything that was covered by the message, because when I closed the message, it disappeared visually, but technically it just became transparent and it was still covering other elements. It took me a long time to figure out what’s going on and how to solve this issue, but finally I've decided to add an 'onClick' event to the button, so it makes the webpage reload.
 Special thanks to [Very Academy](https://www.youtube.com/channel/UC1mxuk7tuQT2D0qTMgKji3w) YouTube channel that helped me to implement wishlist functionality.
 There are still few minor issues I'll have to solve in the future. To make a wishlist functionality I've added one more field to the Product model form.<br/>
 ![model](/pics/model.jpg)
