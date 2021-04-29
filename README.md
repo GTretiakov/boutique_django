@@ -55,5 +55,5 @@ I assigned a very high z-index from messages so they appear on top of all other 
 Special thanks to [Very Academy](https://www.youtube.com/channel/UC1mxuk7tuQT2D0qTMgKji3w) YouTube channel that helped me to implement wishlist functionality.
 There are still few minor issues I'll have to solve in the future. To make a wishlist functionality I've added one more field to the Product model.<br/>
 ![model](/pics/model.jpg)
-But when I went to 'Product Management' page I've noticed that a new field appeared.<br/>
+<br/>But when I went to 'Product Management' page I've noticed that a new field appeared.<br/>
 ![product](/pics/product.jpg)
